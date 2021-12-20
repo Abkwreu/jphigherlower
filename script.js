@@ -3,7 +3,7 @@ var cln;
 var cr;
 var crn;
 var minDiff = 1500;
-var decreaseBy = 100;
+var decreaseBy = 50;
 var score = 0;
 var state = false;
 var moreCorrect = false;
