@@ -2,7 +2,7 @@ var cl;
 var cln;
 var cr;
 var crn;
-var minDiff = 1000;
+var minDiff = 1500;
 var decreaseBy = 100;
 var score = 0;
 var state = false;
