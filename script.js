@@ -13,15 +13,17 @@ window.onload = function () {
     next = document.getElementById("next");
     more = document.getElementById("more");
     less = document.getElementById("less");
+    again = document.getElementById("again");
 
     next.style.display = "none"
+    again.style.display = "none";
     cl = randInt(data.length);
     cln = data[cl];
     data.splice(cl, 1);
     setupQuizzes();
     refreshHtml();
 
-    document.getElementById("next").onclick = function () {
+    next.onclick = function () {
         cl = cr;
         cln = crn;
         state = false;
@@ -32,7 +34,7 @@ window.onload = function () {
         next.style.display = "none";
     }
 
-    document.getElementById("more").onclick = function () {
+    more.onclick = function () {
         if (moreCorrect) {
             score++;
             state = true;
@@ -50,7 +52,7 @@ window.onload = function () {
         }
     }
 
-    document.getElementById("less").onclick = function () {
+    less.onclick = function () {
         if (lessCorrect) {
             score++;
             state = true;
@@ -66,6 +68,10 @@ window.onload = function () {
             refreshHtml();
             gameOver();
         }
+    }
+
+    again.onclick = function() {
+        location.reload();
     }
 };
 
@@ -97,5 +103,6 @@ function refreshHtml() {
 function gameOver() {
     more.style.display = "none";
     less.style.display = "none";
-    document.getElementById("buttons").innerHTML = "Game Over";
+    again.style.display = "inline-block";
+    document.getElementById("gameover").innerHTML = "Game Over";
 }

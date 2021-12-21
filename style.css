@@ -23,8 +23,13 @@ h2 {
 #buttons {
     display: flex;
     justify-content: center;
+    margin-top: 50px;
+}
+
+#gameover {
     font-size: 48px;
     margin-top: 50px;
+    text-align: center;
 }
 
 .gbutton {
@@ -36,7 +41,7 @@ h2 {
 .column {
     float: left;
     width: 50%;
-    border: 5px solid black;
+    border: 5px solid;
     box-sizing: border-box;
     height: auto;
     text-align: center;
